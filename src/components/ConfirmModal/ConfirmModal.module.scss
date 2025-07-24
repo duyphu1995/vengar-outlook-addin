@@ -1,0 +1,157 @@
+@import '../../theme';
+
+.backdrop {
+  z-index: 1056;
+}
+
+.borderContent {
+  border-left: 2px solid map-get($theme-colors, 'primary') !important;
+  border-right: 2px solid map-get($theme-colors, 'primary') !important;
+
+  &Success {
+    border-left: 2px solid map-get($theme-colors, 'success') !important;
+    border-right: 2px solid map-get($theme-colors, 'success') !important;
+  }
+
+  &Shred {
+    border-left: 2px solid map-get($theme-colors, 'danger') !important;
+    border-right: 2px solid map-get($theme-colors, 'danger') !important;
+  }
+}
+
+.borderFooter {
+  border-left: 2px solid map-get($theme-colors, 'primary') !important;
+  border-right: 2px solid map-get($theme-colors, 'primary') !important;
+  border-bottom: 2px solid map-get($theme-colors, 'primary') !important;
+  border-top: 0;
+
+  &Success {
+    border-left: 2px solid map-get($theme-colors, 'success') !important;
+    border-right: 2px solid map-get($theme-colors, 'success') !important;
+    border-bottom: 2px solid map-get($theme-colors, 'success') !important;
+    border-top: 0;
+  }
+
+  &Shred {
+    border-left: 2px solid map-get($theme-colors, 'danger') !important;
+    border-right: 2px solid map-get($theme-colors, 'danger') !important;
+    border-bottom: 2px solid map-get($theme-colors, 'danger') !important;
+    border-top: 0;
+  }
+}
+
+.btnConfirm {
+  width: 120px;
+  height: 36px;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 12px;
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  font-size: 14px;
+
+  &Success {
+    width: 120px;
+    height: 36px;
+    background-color: map-get($theme-colors, 'success') !important;
+    border-color: map-get($theme-colors, 'success') !important;
+  }
+
+  &Success:active {
+    background-color: map-get($theme-colors, 'success') !important;
+    border-color: map-get($theme-colors, 'success') !important;
+  }
+
+  &Success:hover {
+    background-color: map-get($theme-colors, 'success') !important;
+    border-color: map-get($theme-colors, 'success') !important;
+    opacity: 0.75;
+  }
+
+  &Success:focus {
+    background-color: map-get($theme-colors, 'success') !important;
+    border-color: map-get($theme-colors, 'success') !important;
+    box-shadow: 0 0 0 0.25rem rgba(70, 217, 164, 0.5) !important;
+  }
+
+  &Shred {
+    width: 120px;
+    height: 36px;
+    background-color: map-get($theme-colors, 'danger');
+    border-color: map-get($theme-colors, 'danger');
+  }
+
+  &Shred:active {
+    background-color: map-get($theme-colors, 'danger');
+    border-color: map-get($theme-colors, 'danger');
+  }
+
+  &Shred:hover {
+    background-color: map-get($theme-colors, 'danger');
+    border-color: map-get($theme-colors, 'danger');
+    opacity: 0.75;
+  }
+
+  &Shred:focus {
+    background-color: map-get($theme-colors, 'danger');
+    border-color: map-get($theme-colors, 'danger');
+    box-shadow: 0 0 0 0.25rem rgba(240, 57, 90, 0.5) !important;
+  }
+}
+
+.btnConfirm:disabled{
+  background-color: map-get($theme-colors, 'primary');
+  color: white;
+}
+
+.closeIconDisable{
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.dialog {
+  z-index: 1057;
+  font-family: 'SpaceGrotesk';
+}
+
+.footerModal {
+  width: 100%;
+}
+
+.header {
+  background-color: map-get($theme-colors, 'primary') !important;
+  border-radius: 8px 8px 0 0;
+
+  &Success {
+    background-color: map-get($theme-colors, 'success')  !important;
+    border-radius: 8px 8px 0 0;
+  }
+
+  &Shred{
+    background-color: map-get($theme-colors, 'danger') !important;
+    border-radius: 8px 8px 0 0;
+  }
+}
+
+.headerBoderBottom{
+  border-bottom: 0;
+}
+
+.icon{
+  width: 18px;
+  height: 100%;
+  padding-right: 18px;
+  cursor: pointer;
+}
+
+.inputShred{
+  width: 200px;
+  height: 35px;
+  border: 1px solid white;
+  border-radius: 0;
+}

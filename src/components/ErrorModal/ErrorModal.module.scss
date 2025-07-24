@@ -1,0 +1,84 @@
+@import '../../theme';
+
+.backdrop {
+    z-index: 1056;
+}
+
+.borderContent {
+    border-left: 2px solid map-get($theme-colors, 'danger') !important;
+    border-right: 2px solid map-get($theme-colors, 'danger') !important;
+}
+
+.borderFooter {
+    border-bottom: 2px solid map-get($theme-colors, 'danger') !important;
+    border-left: 2px solid map-get($theme-colors, 'danger') !important;
+    border-right: 2px solid map-get($theme-colors, 'danger') !important;
+    border-top: 0;
+}
+
+.btnConfirm {
+    align-items: center;
+    background-color: map-get($theme-colors, 'danger') !important;
+    border-color: map-get($theme-colors, 'danger') !important;
+    border-radius: 4px;
+    display: flex;
+    height: 36px;
+    flex-direction: row;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    justify-content: center;
+    line-height: normal;
+    margin-left: 10px;
+    padding: 0px 12px;
+    width: 120px;
+
+    &:active {
+        background-color: map-get($theme-colors, 'danger');
+        border-color: map-get($theme-colors, 'danger');
+    }
+
+    &:hover {
+        background-color: map-get($theme-colors, 'danger');
+        border-color: map-get($theme-colors, 'danger');
+        opacity: 0.75;
+    }
+
+    &:focus {
+        background-color: map-get($theme-colors, 'danger');
+        border-color: map-get($theme-colors, 'danger');
+        box-shadow: 0 0 0 0.25rem rgba(240, 57, 90, 0.5) !important;
+    }
+}
+
+.dialog {
+    z-index: 1057;
+    font-family: 'SpaceGrotesk';
+}
+
+.footerModal {
+    width: 100%;
+}
+
+.header {
+    align-items: center;
+    background-color: map-get($theme-colors, 'danger') !important;
+    border-radius: 8px 8px 0 0;
+
+    &BoderBottom {
+        border-bottom: 0;
+        padding: 0 !important;
+    }
+}
+
+.icon {
+    cursor: pointer;
+    height: 100%;
+    padding-right: 5px;
+    width: 18px;
+
+    &Warning {
+        height: 100%;
+        width: 24px;
+    }
+}

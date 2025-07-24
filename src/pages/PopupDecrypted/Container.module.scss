@@ -1,0 +1,263 @@
+@import '../Secure/Protections/Protection.module.scss';
+@import '../Secure/Where/Where.module.scss';
+@import '../Secure/When/When.module.scss';
+
+@media print {
+  .docViewer {
+    display: none;
+  }
+}
+
+.contentLeft {
+  overflow-y: scroll;
+}
+
+.content_right {
+  --bs-bg-opacity: 1;
+
+  position: relative;
+  background: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity));
+  padding: 0;
+
+  .protectsContainer {
+    .protectItem {
+      position: absolute;
+    }
+  }
+
+  .whereContainerDetail {
+    max-height: calc(100vh - 70px) !important;
+  }
+
+  .dateTimeSelect {
+    margin: 0.5em 0 0 31px !important;
+  }
+}
+
+.customInput:focus {
+  box-shadow: none !important;
+}
+
+.errorInput {
+  font-size: inherit !important;
+  display: inline !important;
+  border-bottom: 2px solid map-get($theme-colors, 'danger') !important;
+  border-radius: 3px !important;
+}
+
+.errorValidateInput {
+  color: map-get($theme-colors, 'danger');
+  font-size: 13px;
+  margin-left: 5px;
+}
+
+.row_content_right {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  height: 100%;
+}
+
+.vaultContainer {
+  background-color: $body-bg;
+  height: 100vh;
+}
+
+.iconBtn {
+  height: 18px;
+  width: 18px;
+  margin-right: 10px;
+  padding-bottom: 5px;
+  opacity: 1 !important;
+}
+
+.table {
+  margin-top: -26px;
+  width: auto;
+}
+
+.table input {
+  width: 500px;
+  height: 30px;
+}
+
+.table th,
+.table td {
+  padding: 0.5em 0;
+}
+
+.body {
+  position: relative;
+  margin: 0 !important;
+  padding: 10px !important;
+  flex: 1;
+}
+
+.drm {
+  display: flex;
+  min-width: 282px;
+  align-items: center;
+  margin-right: -15px;
+}
+
+.drm svg {
+  height: 22px;
+  width: 22px;
+  padding-bottom: 10px;
+  margin: 0 0.4em;
+}
+
+.drm img {
+  height: 32px;
+  width: 22px;
+  margin: 0 0.4em;
+  padding-bottom: 10px;
+}
+
+.iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.docViewerModal {
+  height: 90%;
+  overflow-y: scroll;
+}
+
+.docViewer {
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  user-select: none;
+  overflow-x: scroll;
+}
+
+.docViewerModal::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+
+.docViewer::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+
+.addAttachmentIcon {
+  font-size: 1.2em;
+}
+
+.headerCell {
+  display: flex;
+  align-items: center;
+}
+
+.headerText {
+  margin-right: 10px;
+}
+
+.inputRecipient {
+  border-radius: 3px;
+  width: 24rem;
+  background-color: white;
+  color: black;
+}
+
+input {
+  border-radius: 3px;
+  border: 1px solid white;
+  width: 100%;
+}
+
+.labelDRM {
+  color: white;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 21px;
+  padding-bottom: 10px !important;
+}
+
+.btnReplyAndForward {
+  background: map-get($theme-colors, 'primary') !important;
+  border-color: map-get($theme-colors, 'primary') !important;
+  border-radius: 2px;
+  height: 35px;
+  font-weight: 500;
+}
+
+.btn {
+  border-radius: 2px;
+  background: map-get($theme-colors, 'danger');
+  height: 35px;
+  border-color: map-get($theme-colors, 'danger');
+  font-weight: 500;
+  --bs-btn-hover-bg: map-get($theme-colors, 'danger');
+  --bs-btn-hover-border-color: map-get($theme-colors, 'danger');
+  --bs-btn-disabled-bg: map-get($theme-colors, 'danger');
+  --bs-btn-disabled-border-color: map-get($theme-colors, 'danger');
+  --bs-btn-active-bg: map-get($theme-colors, 'danger');
+  --bs-btn-active-border-color: map-get($theme-colors, 'danger');
+
+  &:active {
+    background-color: map-get($theme-colors, 'danger');
+    border-color: map-get($theme-colors, 'danger');
+  }
+
+  &:hover {
+    background-color: map-get($theme-colors, 'danger');
+    border-color: map-get($theme-colors, 'danger');
+    opacity: 0.75;
+  }
+
+  &:focus {
+    background-color: map-get($theme-colors, 'danger');
+    border-color: map-get($theme-colors, 'danger');
+    box-shadow: 0 0 0 0.25rem rgba(240, 57, 90, 0.5) !important;
+  }
+}
+
+.attachmentBtn {
+  --bs-btn-color: white !important;
+  --bs-btn-hover-color: white !important;
+  margin-bottom: 2px !important;
+}
+
+.subjectTitle {
+  font-size: 20px !important;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  margin-top: 12px;
+}
+
+.circleContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: map-get($theme-colors, 'primary') !important;
+  border-radius: 50% !important;
+}
+
+.avaText {
+  font-size: 16px;
+  color: white;
+}
+
+.btnShredAndRevoke {
+  margin-right: 10px;
+  padding-bottom: 5px;
+}
+
+.cardBody {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardHeaderMail {
+  padding: 15px 15px 0 15px;
+}

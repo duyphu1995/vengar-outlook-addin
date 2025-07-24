@@ -1,0 +1,22 @@
+.listItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 5px;
+    gap: 7px;
+    margin-bottom: 10px;
+
+    &Label {
+        flex: 1;
+        font-weight: 400;
+    }
+
+    &Text {
+        font-size: 14px;
+        font-weight: 400;
+
+        &NotAllow {
+            color: rgba(255, 255, 255, 0.5),
+        }
+    }
+}

@@ -1,0 +1,138 @@
+@import '../../theme';
+
+.dataGrid {
+  margin-top: 1em;
+  flex: 1 1 0;
+  min-height: 0;
+  max-height: 455px;
+  overflow-y: auto !important;
+  background-color: $body-bg;
+  border-radius: 14px;
+  border: 1px solid #6c757d;
+  margin-left: 22px;
+  margin-right: 22px;
+}
+
+.dataGrid::-webkit-scrollbar {
+  width: 0px;
+}
+
+
+table {
+  margin-bottom: 0px !important;
+}
+
+.dataGrid td {
+  vertical-align: middle;
+  padding: 12px;
+}
+
+.dataGrid th {
+  background-color: #36364B;
+  padding: 16px;
+  position: sticky;
+  top: 0;
+}
+
+.dataGrid button {
+  width: 138.328px;
+  height: 35px;
+  padding: 0px 12px;
+  --bs-btn-hover-bg: none !important;
+  --bs-btn-hover-color: none !important;
+}
+
+.dataGrid td:last-child button {
+  width: 70px;
+}
+
+.dataGrid th:last-child,
+.dataGrid td:last-child {
+  text-align: center;
+}
+
+.dataGrid th:nth-child(4) {
+  text-align: center;
+}
+
+.dataGrid td:nth-child(4) {
+  text-align: center;
+}
+
+.dataGrid td,
+.dataGrid tr:hover td,
+.dataGrid td:last-child button {
+  color: rgb(255, 255, 255) !important;
+}
+
+.radio {
+  display: inline-flex;
+  position: relative;
+  height: 16px;
+  width: 16px;
+  border-radius: 8px;
+  background-color: transparent;
+  border: 1px solid map-get($theme-colors, 'light');
+}
+
+.radioChecked {
+  border-color: map-get($theme-colors, 'primary');
+}
+
+.radioChecked:after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 10px;
+  width: 10px;
+  border-radius: 5px;
+  background-color: map-get($theme-colors, 'primary');
+}
+
+.freeLabel {
+  margin-right: 1em;
+}
+
+.txtEBAccount {
+  color: #FFF;
+  text-align: center;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px;
+  /* 160% */
+  letter-spacing: -0.9px;
+  padding-top: 80px;
+}
+
+.txtLoginto {
+  color: rgba(255, 255, 255, 0.50);
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  padding-bottom: 50px;
+}
+
+.logo {
+  width: 232px;
+  height: 32px;
+}
+
+.header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.loading {
+  left: 50%;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+
+body {
+  overflow: hidden;
+}

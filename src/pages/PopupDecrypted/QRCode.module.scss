@@ -1,0 +1,114 @@
+@import '../../pages/PopupDecrypted/Container.module.scss';
+
+.cardHeaderMail{
+  border-bottom: 2px solid $border-color !important;
+  margin: 10px;
+  padding: 10px 10px 0 10px;
+}
+
+.body {
+  background-color: #1f1f2c !important;
+  color: white !important;
+}
+
+.btnCancel {
+  width: 120px;
+  height: 36px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em 2em;
+  border-radius: 4px;
+  background-color: transparent;
+  color: white;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  font-size: 14px;
+
+  &:not(:first-child) {
+    margin-left: 1em;
+  }
+}
+
+.btnCancel:hover {
+  background-color: white;
+  color: black;
+}
+
+.btnCancel:focus {
+  background-color: white;
+  color: black;
+  box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.5) !important;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: 100%;
+  max-width: 100%;
+  padding: 0 !important;
+}
+
+.controlSpacer {
+  flex: 1;
+}
+
+.controls {
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: flex-end;
+  padding: 1em;
+}
+
+.title {
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 21px;
+}
+
+.description {
+  max-width: 50%;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.qrCode {
+  max-width: 150px;
+  margin: 1em 0;
+}
+
+.qrContainer {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1em 0;
+}
+
+.qrContainerIsCompose {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 1em 0;
+}
+
+.qrCountDown {
+  max-width: 50%;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+}

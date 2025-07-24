@@ -1,0 +1,32 @@
+@import '../theme';
+
+.my-switch {
+  background: white;
+  border-radius: 14px;
+  cursor: pointer;
+  height: 26px;
+  position: relative;
+  width: 62px;
+
+  .switch-status {
+    align-items: center;
+    border-radius: 14px;
+    background: map-get($theme-colors, 'danger');
+    display: flex;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    height: 26px;
+    justify-content: center;
+    line-height: 18px;
+    transition: all 0.2s ease;
+    width: 45px;
+  }
+
+  &.checked {
+    .switch-status {
+      background: map-get($theme-colors, 'success');
+      transform: translateX(17px);
+    }
+  }
+}

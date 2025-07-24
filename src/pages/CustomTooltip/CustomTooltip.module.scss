@@ -1,0 +1,70 @@
+@import '../../theme';
+
+.tooltipContent {
+    border: 2px solid map-get($theme-colors, 'primary');
+    border-radius: 5px 5px 0 0;
+    
+    div:nth-child(1){
+        &::before,&::after {
+            border-bottom-color: map-get($theme-colors, 'primary');
+        }
+    }
+
+    .tooltipContentHeader {
+        &::before {
+            display: none;
+            border-bottom-color: map-get($theme-colors, 'primary');
+        }
+    }
+}
+
+.tooltipContent .tooltipContentContent {
+    position: relative;
+    width: 270px;
+    flex-shrink: 0;
+    border-radius: 5px 5px 0 0;
+    border: 2px solid map-get($theme-colors, 'primary');
+    background: white;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: normal;
+    transition: opacity 0.2s;
+    color: black;
+}
+
+.tooltipContent .tooltipContentHeader {
+    background: map-get($theme-colors, 'primary');
+    color: white;
+    padding: 5px;
+    border-radius: 0 0 0 0;
+    position: relative;
+}
+
+.tooltipContent .tooltipContentBody {
+    padding: 10px;
+    word-wrap: break-word;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    color: black;
+}
+
+.tooltipContent .tooltipContentTrigger:hover+.tooltipContentContent {
+    opacity: 1;
+    margin-top: 18px;
+}
+
+.tooltipContent .tooltipContentContent::before {
+    content: "";
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 14px;
+    background: var(--Blurple-100, map-get($theme-colors, 'primary'));
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}

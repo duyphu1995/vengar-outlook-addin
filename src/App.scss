@@ -1,0 +1,92 @@
+@font-face {
+  font-family: 'SpaceGrotesk';
+  src: url('../public/SpaceGrotesk[wght].woff2') format('woff2');
+}
+
+@import 'theme';
+
+html,
+body,
+#root,
+#app {
+  height: 100%;
+  border-radius: 15px;
+  font-family: $font-family-base;
+  color: white !important
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#app>header {
+  display: flex;
+  background-color: #0f171c;
+}
+
+#app>main {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+#app>main>.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+#react-doc-viewer #no-renderer,
+#react-doc-viewer #txt-renderer {
+  background-color: white;
+  color: black;
+}
+
+#react-doc-viewer #no-renderer {
+  padding: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+#react-doc-viewer #no-renderer-download,
+#react-doc-viewer #pdf-download {
+  display: none;
+}
+
+#react-doc-viewer #docx-renderer,
+#react-doc-viewer #docx-html-body {
+  width: 100%;
+}
+
+p {
+  font-size: $font-size-p;
+}
+
+span {
+  font-size: $font-size-span;
+}
+
+.invalid-feedback {
+  font-size: $font-size-secondary;
+  color: map-get($theme-colors, 'danger');
+}
+
+.text-secondary {
+  font-size: $font-size-secondary;
+}
+
+.text-label {
+  font-size: $font-size-label;
+}
+
+.loading {
+  left: 50%;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
