@@ -1,0 +1,130 @@
+@import '../../../theme';
+
+body {
+  overflow: overlay;
+}
+
+.countriesContainer {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 10px;
+  overflow-y: hidden;
+}
+
+.country {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  margin: 0.25em 0;
+
+  &List {
+    flex: 1 1 0;
+    min-height: 0;
+  }
+
+  &All {
+    align-items: center;
+    border-bottom: 1px solid $border-color;
+    display: flex;
+    flex-direction: row;
+    font-weight: 500;
+    margin: 0.25em 0;
+    padding-bottom: 10px;
+    padding-top: 5px;
+  }
+
+  &Container {
+    display: flex;
+    flex: 1;
+    max-height: 100%;
+    overflow-y: auto;
+  
+    &HasData {
+      border-bottom: 1px solid $border-color;
+    }
+  }
+}
+
+.filter {
+  color: white;
+  background-color: transparent;
+  border: none;
+  font-weight: 400;
+  padding: 4px 14px 4px 14px;
+
+  &Active {
+    background-color: map-get($theme-colors, 'primary');
+    border-radius: 50px;
+    color: white;
+    opacity: 1;
+    padding: 4px 14px 4px 14px;
+  }
+
+  &Container {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.search {
+  background-color: $background-color;
+  border: none;
+  height: 34px;
+  position: relative;
+  z-index: 1;
+  
+  &:focus {
+    z-index: 0;
+    background-color: $background-color;
+  }
+
+  &Container {
+    position: relative;
+  }
+
+  &Icon {
+    height: 18px;
+    opacity: 0.2;
+    position: absolute;
+    right: 0.5em;
+    top: 0.5em;
+    width: 18px;
+    z-index: 0;
+  }
+}
+
+.switchContainer {
+  margin-right: 1em;
+}
+
+.whereSubtitle {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.whereTitleDecs{
+  padding: 10px;
+}
+
+.whereContainer {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: 100%;
+
+  &Detail{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    max-height: calc(100vh - 137px);
+  }
+}

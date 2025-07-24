@@ -1,0 +1,50 @@
+@import '../../theme';
+
+.btnDecrypt {
+  align-items: center;
+  background: map-get($theme-colors, 'primary');
+  border: 2px solid white;
+  border-radius: 4px;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  justify-content: center;
+  height: 38px;
+  gap: 10px;
+  line-height: normal;
+  margin-top: 50px;
+  padding: 0px 12px;
+  position: relative;
+  width: 130px;
+  z-index: 1;
+}
+
+.decryptContainer {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  position: relative;
+  text-align: center;
+}
+
+.decryptImage {
+  margin-top: 5px;
+  position: absolute;
+}
+
+.loading {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.versionText {
+  text-align: center;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  margin: 5px;
+}

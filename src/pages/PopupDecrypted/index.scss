@@ -1,0 +1,38 @@
+@import '../../theme';
+
+.my-switch-true {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.my-switch {
+  background: white;
+  border-radius: 14px;
+  cursor: pointer;
+  height: 26px;
+  position: relative;
+  width: 62px;
+
+  .switch-status {
+    align-items: center;
+    background: map-get($theme-colors, 'danger');
+    border-radius: 14px;
+    display: flex;
+    font-family: $font-family-base;
+    font-size: $font-size-label;
+    font-style: normal;
+    font-weight: 500;
+    justify-content: center;
+    height: 26px;
+    line-height: 18px;
+    transition: all 0.2s ease;
+    width: 45px;
+  }
+
+  &.checked {
+    .switch-status {
+      background: map-get($theme-colors, 'success');
+      transform: translateX(17px);
+    }
+  }
+}

@@ -1,0 +1,263 @@
+$white: #fff;
+$border-color: rgba(255, 255, 255, 0.2);
+$background-color: rgba(255, 255, 255, 0.2);
+
+$theme-colors: (
+  danger: #f0395a,
+  dark: #36364b,
+  light: $white,
+  primary: #5957f0,
+  secondary: #cdcdd2,
+  success: #46d9a4
+);
+
+$body-bg: #1f1f2c;
+$body-color: $white;
+
+$btn-close-color: $white;
+
+$font-weight-base: 400;
+$font-family-base: 'SpaceGrotesk', sans-serif;
+$font-size-secondary: 14px;
+$font-size-label: 16px;
+$font-size-p: 14px;
+$font-size-span: 14px;
+
+$border-button-radius: 5px;
+
+$input-bg: $body-bg;
+$input-border-color: $border-color;
+$input-color: $white;
+
+$modal-content-bg: $body-bg;
+$modal-footer-border-color: $border-color;
+$modal-header-border-color: $border-color;
+
+$nav-link-color: $border-color;
+$nav-link-hover-color: map-get($theme-colors, 'primary');
+$nav-tabs-link-active-color: $white;
+$nav-tabs-border-color: $border-color;
+$nav-tabs-link-active-border-color: $white;
+
+#app .nav-tabs .nav-link {
+  border-width: 0 0 1px 0;
+}
+
+#app .table {
+  margin-bottom: 0;
+}
+
+#app .table thead {
+  border-bottom: 1px solid $border-color;
+}
+
+#app .table tbody:not(:first-child) {
+  border-top: 0;
+}
+
+#app .table th {
+  background-color: #36364b;
+}
+
+#app .table td {
+  border: 0;
+}
+
+#app .table th,
+#app .table td {
+  padding: 1em;
+}
+
+#app .table tr:not(:first-child) td {
+  border-top: 1px solid $border-color;
+}
+
+@import '~bootstrap/scss/bootstrap';
+@import 'font-awesome/css/font-awesome.min.css';
+
+@import 'react-bootstrap-typeahead/css/Typeahead.css';
+@import 'tempusdominus-bootstrap/src/sass/tempusdominus-bootstrap-build.scss';
+
+.borderBottom {
+  border-bottom: 1px solid $border-color;
+}
+
+button {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.btnCancel {
+  width: 120px;
+  height: 36px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 12px;
+  border-radius: 4px;
+  background-color: transparent;
+  color: white;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  font-size: 14px;
+}
+
+.btnCancel:disabled {
+  background-color: transparent;
+  color: white;
+}
+
+.btnCancel:hover {
+  background-color: white;
+  color: black;
+}
+
+.btnCancel:focus{
+  background-color: white;
+  color: black;
+  box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.5) !important;
+}
+
+.form-check-input {
+  background-color: map-get($theme-colors, 'light');
+  border-color: $border-color;
+  cursor: pointer;
+}
+
+.form-check-input:checked {
+  background-color: map-get($theme-colors, 'primary');
+  border-color: $border-color;
+}
+
+.form-switch {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.form-switch .form-check-input {
+  height: 1.5em;
+  width: 3em;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  background-image: url('data: image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27%3e%3ccircle r=%273%27 fill=%27rgba%2841, 44, 67, 1%29%27/%3e%3c/svg%3e');
+}
+
+.form-switch .form-check-input:checked {
+  background-color: map-get($theme-colors, 'primary');
+}
+
+.form-switch .form-check-input.success:checked {
+  background-color: map-get($theme-colors, 'success');
+  background-image: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27%3e%3ccircle r=%273%27 fill=%27rgba%2841, 44, 67, 1%29%27/%3e%3c/svg%3e');
+}
+
+.form-switch .form-check-input:focus{
+  background-image: url('data: image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27%3e%3ccircle r=%273%27 fill=%27rgba%2841, 44, 67, 1%29%27/%3e%3c/svg%3e');
+}
+
+.datepicker-months,
+.timepicker-hour,
+.timepicker-hours,
+.timepicker-minute,
+.bootstrap-datetimepicker-widget table td {
+  color: $body-bg;
+}
+
+.bootstrap-datetimepicker-widget table th,
+.bootstrap-datetimepicker-widget table td {
+  background-color: $white;
+  color: $body-bg;
+}
+
+#app .datetimepicker-input {
+  background-color: transparent;
+  border: 2px solid $border-color;
+}
+
+#app .timepicker .btn {
+  padding: 0;
+}
+
+#app .bootstrap-datetimepicker-widget table td,
+#app .bootstrap-datetimepicker-widget table td span {
+  height: 38px;
+  line-height: 38px;
+  width: 38px;
+}
+
+#app .react-date-picker {
+  display: block;
+}
+
+#app .react-date-picker__calendar .react-calendar {
+  border-radius: 0.25em;
+}
+
+#app .react-calendar__tile--active {
+  background-color: map-get($theme-colors, 'primary');
+  border-radius: 0.25rem;
+}
+
+#app .react-date-picker__wrapper {
+  padding: 0.375rem 0.75rem;
+  line-height: 1.5;
+  border: 1px solid $border-color;
+  border-radius: 0.25rem;
+}
+
+#app .react-date-picker-open .react-date-picker__wrapper {
+  background-color: $body-bg;
+  border-color: $input-focus-border-color;
+}
+
+.react-date-picker__inputGroup__input {
+  color: $body-color;
+}
+
+.rbt-token-remove-button {
+  border: 0;
+  background: transparent;
+}
+
+.rbt-input-multi,
+.rbt-input-multi .rbt-input-main {
+  color: $white;
+}
+
+.rbt-input-multi.focus {
+  border-color: $border-color;
+}
+
+.ck.ck-editor,
+.ck.ck-editor__main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.ck.ck-content {
+  flex: 1;
+}
+
+::-webkit-scrollbar {
+  background: transparent;
+  width: 6px;
+  height: 120px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $background-color;
+  border-radius: 10px;
+  scrollbar-width: thin;
+  height: 120px;
+}
+
+::-webkit-scrollbar-corner {
+  background: $background-color;
+  border-radius: 10px;
+  scrollbar-width: thin;
+  height: 120px;
+}

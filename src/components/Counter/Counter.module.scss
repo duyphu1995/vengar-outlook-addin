@@ -1,0 +1,5 @@
+@import '../../theme';
+
+.expiring {
+  color: map-get($theme-colors, 'danger');
+}

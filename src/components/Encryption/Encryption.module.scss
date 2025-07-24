@@ -1,0 +1,168 @@
+@import '../../pages/Secure/Protections/Protection.module.scss';
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.borderBottom {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.borderSwitchControl {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 15px 15px 10px 15px;
+}
+
+.buttonReview {
+    font-weight: 500;
+}
+
+.content_right {
+    --bs-bg-opacity: 1;
+    position: relative;
+
+    .protectsContainer {
+        .protectItem {
+            position: absolute;
+            background: #201f2d;
+        }
+    }
+}
+
+.disabledbutton {
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+.listItem {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+    margin: 0 5px 10px 5px;
+    margin-bottom: 10px;
+
+    &Text {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    &Label {
+        flex: 1;
+        font-weight: 500;
+    }
+}
+
+.loadingText {
+    font-size: 24px;
+    margin-top: 1em;
+    text-align: center;
+    width: 250px;
+}
+
+.loadingSpinnerContainer {
+    position: relative;
+}
+
+.overlay {
+    align-items: center;
+    background: radial-gradient(circle,
+            rgba(0, 0, 0, 0.8) 0%,
+            rgba(31, 31, 44, 0.6) 100%);
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 300px;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+}
+
+.row_content_right {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    margin: 0;
+}
+
+.secondary {
+    color: rgba(255, 255, 255, 0.5),
+}
+
+.successIcon {
+    color: map-get($theme-colors, 'success');
+}
+
+.swichControl {
+    width: 100%;
+
+    b {
+        font-size: 18px;
+    }
+}
+
+.titlePermission {
+    margin-top: 12px;
+}
+
+.vault {
+    height: 152px;
+    width: 160px;
+
+    &Wheel {
+        position: absolute;
+        left: 25px;
+        top: 37px;
+        height: 61px;
+        width: 61px;
+
+        &.submitting {
+            animation-name: spin;
+            animation-duration: 5000ms;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+    }
+}
+
+.withoutBorderSwitchControl {
+    padding: 15px 15px 10px 15px;
+}
+
+.versionText {
+    text-align: center;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    justify-content: center;
+    width: 100%;
+    margin: 5px;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: fit-content(115px) fit-content(120px) 1fr;
+    gap: 8px;
+}
+
+.autoWidth {
+    width: auto;
+}
+
+.marginLeft3px {
+    margin-left: 3px;
+}
+
+.marginRight3px {
+    margin-right: 3px;
+}

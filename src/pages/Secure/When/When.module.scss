@@ -1,0 +1,111 @@
+@import '../../../theme';
+
+.datepicker>div:nth-child(1) {
+  display: none;
+}
+
+.dateTimeSelect {
+  display: flex;
+  flex-direction: row;
+  margin: 0.5em 0 1em 31px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.timeSelect {
+  border-bottom: 1px solid $border-color;
+  margin-bottom: 10px;
+
+  &Container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &Option {
+    align-items: center;
+    background-color: transparent;
+    border: 0;
+    border-radius: 8px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    margin: 0.25em 0;
+    padding: 1.4em;
+    padding-left: 31px;
+    position: relative;
+    text-align: left;
+
+    &:hover {
+      opacity: 0.75;
+    }
+
+    &:before {
+      content: '';
+      border: 1px solid map-get($theme-colors, 'light');
+      border-radius: 8px;
+      height: 16px;
+      left: 0;
+      position: absolute;
+      top: 1em;
+      width: 16px;
+    }
+
+    &Active {
+      background-color: transparent;
+
+      &:before {
+        border: 1px solid map-get($theme-colors, 'primary');
+        left: 0;
+      }
+
+      &:after {
+        content: '';
+        background-color: map-get($theme-colors, 'primary');
+        border-radius: 5px;
+        display: block;
+        height: 10px;
+        left: 0;
+        margin-top: 3px;
+        margin-left: 3px;
+        position: absolute;
+        top: 1em;
+        width: 10px;
+      }
+    }
+  }
+}
+
+.input {
+  background-color: transparent;
+  border-color: $border-color;
+
+  &Group {
+    margin-right: 1em;
+    position: relative;
+  }
+}
+
+.whenContainer {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.whenSelect {
+  padding: 10px;
+}
+
+.whenSubtitle {
+  font-size: $font-size-secondary;
+  margin: 0;
+  opacity: 0.5;
+}

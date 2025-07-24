@@ -1,0 +1,72 @@
+@import '../../../theme';
+
+.drmDescription {
+  font-size: $font-size-secondary !important;
+  opacity: 0.5;
+}
+
+.drmRow {
+  padding: 1em 0;
+  margin-left: 0.5em;
+  border-bottom: 1px solid $border-color;
+  
+  &Disabled {
+    opacity: 0.5;
+    border-bottom: 1px solid $border-color;
+  }
+
+  &ReadOnly {
+    padding: 0 0 1em 0;
+    border-bottom: 1px solid $border-color;
+
+    &Disabled {
+      opacity: 0.5;
+      border-bottom: 1px solid $border-color;
+    }
+  }
+}
+
+.drmTitle {
+  font-size: $font-size-label !important;
+  font-weight: 500 !important;
+}
+
+.footer{
+  bottom: 0;
+  padding: 20px;
+  position: absolute;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.how {
+  display: flex;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 0 !important;
+
+  &DRM {
+    padding: 0 10px 0px 10px;
+  }
+
+  &DRMDecs {
+    padding: 10px 10px 0px 10px;
+  }
+
+  &Subtitle {
+    font-size: $font-size-secondary;
+    opacity: 0.5;
+  }
+}
+
+.icon {
+  height: 20px;
+  margin-right: 1em;
+  opacity: 1;
+  width: 20px;
+}
+
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+}
